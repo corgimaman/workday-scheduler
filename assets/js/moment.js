@@ -1,3 +1,3 @@
-let now = moment();
+let timeNow = moment();
 
-$("currentDay").text(now.format('LLLL'))
+$("#currentDay").text(timeNow.format('[It is ] LLLL'))
