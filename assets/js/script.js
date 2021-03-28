@@ -4,9 +4,9 @@ let hourly = ["06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00", "13
 for (let i = 0; i < hourly.length; i++) {
     let rows = $("<div>").addClass("row");
     let timeCol = $("<text-area>").text(hourly[i]).addClass("hour col-1");
-    let nestRow = $("<div>").addClass("row");
-    let inputArea = $("<input>").attr("placeholder", "Enter task here").addClass("form-control textarea toDo-input time-block col");
-    let saveBtn = $("<button>").addClass("btn btn-primary saveBtn col-1").html('<i class="fas fa-save"></i>');
-    $(rows).append(timeCol).append(nestRow).append(inputArea).append(saveBtn);
+    let inputArea = $("<input>").attr({placeholder: "Enter task here", id: "input"+[i]}).addClass("form-control textarea toDo-input time-block col-10");
+    let saveBtn = $("<button>").attr("id", "hour"+[i]).addClass("btn btn-primary saveBtn col-1").html('<i class="fas fa-save"></i>');
+    $(rows).append(timeCol).append(inputArea).append(saveBtn);
     $("#schedule").append(rows)
 }
+
