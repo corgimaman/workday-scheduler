@@ -21,3 +21,8 @@ $(".saveBtn").on("click", function(){
     hourSpan = $(this).siblings(".hour").text().trim();
     localStorage.setItem(hourSpan, userInput);
   })
+
+  $("#resetBtn").on("click", function(){
+    localStorage.clear();
+    location.reload();
+  })
